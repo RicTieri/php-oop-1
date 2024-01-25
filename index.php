@@ -1,24 +1,3 @@
-<?php
-include_once __DIR__ . '/models/Movie.php';
-include_once __DIR__ . '/models/Genre.php';
-
-$movie1 = new Movie('Cinema1', 1995, new Genre('action'), 'film bello ma non bellissimo', 173);
-$movie2 = new Movie('Cinema2', 2001, new Genre('thriller'), 'film da paura, ma non fa paura a nessuno', 118);
-
-echo $movie1->title . ' <br>';
-echo $movie1->year . ' <br>';
-echo $movie1->genre->firstGenre. ' <br>';
-echo $movie1->description. ' <br>';
-echo $movie1->getDuration(). ' <br>';
-
-echo $movie2->title . ' <br>';
-echo $movie2->year. ' <br>';
-echo $movie2->genre->firstGenre. ' <br>';
-echo $movie2->description. ' <br>';
-echo $movie2->getDuration(). ' <br>';
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,21 +12,14 @@ echo $movie2->getDuration(). ' <br>';
 
 <body>
   <header>
-    <h1 class="text-center">
+    <h1 class="text-center my-5 pt-3">
       PHP OOP 1
     </h1>
   </header>
-  <main>
+  <main class="mb-5">
     <div class="container">
       <div class="row">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
+        <?php include_once __DIR__ . '/cardMovie.php'?>
       </div>
     </div>
   </main>
