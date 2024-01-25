@@ -11,8 +11,8 @@
 </head>
 
 <body>
-  <header>
-    <h1 class="text-center my-5 pt-3">
+  <header class="bg-dark p-5 shadow">
+    <h1 class="text-center text-white">
       PHP OOP 1
     </h1>
   </header>
